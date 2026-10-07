@@ -196,6 +196,11 @@ class DashboardHelpersTests(unittest.TestCase):
 
     def test_supported_niche_maps_to_nearby_type(self) -> None:
         self.assertEqual(supported_place_types(" Furniture   Stores "), ("furniture_store",))
+        self.assertEqual(supported_place_types("Boutiques"), ("clothing_store",))
+        self.assertEqual(supported_place_types("gyms"), ("gym",))
+        self.assertEqual(supported_place_types("real estate"), ("real_estate_agency",))
+        self.assertEqual(supported_place_types("real estate agencies"), ("real_estate_agency",))
+        self.assertIsNone(supported_place_types("consultancies"))
         self.assertIsNone(supported_place_types("Independent repair specialists"))
 
 

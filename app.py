@@ -172,7 +172,10 @@ def _search_form() -> None:
             [1.7, 1.8, .8, .75, .8], vertical_alignment="bottom"
         )
         city = city_column.text_input("Location", placeholder="City")
-        niche = niche_column.text_input("Business niche", placeholder="e.g. Furniture stores")
+        niche = niche_column.text_input(
+            "Business niche",
+            placeholder="e.g. Furniture stores, boutiques, gyms, consultancies",
+        )
         radius_km = radius_column.number_input("Radius km", 1, 50, 10, step=1)
         max_results = count_column.number_input("Max", 1, MAX_RESULTS, 20, step=1)
         submitted = button_column.form_submit_button(

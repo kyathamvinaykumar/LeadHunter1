@@ -33,7 +33,7 @@ Install dependencies with `python -m pip install -r requirements.txt`, then laun
 streamlit run app.py
 ```
 
-The dashboard uses Google Nearby Search (New) for supported place types when the requested result limit is at most 20. This applies the selected radius as an API restriction. Other searches use paginated Text Search (New) with a circular location bias; Google may return results outside a bias radius. Text Search supports up to 60 results. The dashboard does not perform local distance filtering. Map rendering is built only when Map View is selected.
+The dashboard uses Google Nearby Search (New) for supported place types when the requested result limit is at most 20. Common mapped niches include boutiques, gyms, and real estate agencies. Other searches, including consultancies, use paginated Text Search (New) with a circular location bias; Google may return results outside a bias radius. Text Search supports up to 60 results. The dashboard does not perform local distance filtering. Map rendering is built only when Map View is selected.
 
 Dashboard exports are generated in memory and downloaded from the interface. The existing CLI and its timestamped file exports are unchanged.
 
